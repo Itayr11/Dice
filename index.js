@@ -49,3 +49,8 @@ function updatenames() {
   document.getElementsByClassName("player1name")[0].innerHTML = player1name;
   document.getElementsByClassName("player2name")[0].innerHTML = player2name;
 }
+function Reset()
+{
+  count1=0;
+  count2=0;
+}
