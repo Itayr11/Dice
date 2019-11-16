@@ -46,8 +46,13 @@ else {
 function updatenames() {
   player1name = document.getElementById("player1name").value;
   player2name = document.getElementById("player2name").value;
+  if (player1name !== "" && player2name!= "")
+  {
   document.getElementsByClassName("player1name")[0].innerHTML = player1name;
   document.getElementsByClassName("player2name")[0].innerHTML = player2name;
+}
+else
+alert("write some names");
 }
 function Reset()
 {
