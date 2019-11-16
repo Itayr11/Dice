@@ -51,6 +51,9 @@ function updatenames() {
 }
 function Reset()
 {
-  count1=0;
-  count2=0;
+  count1=1;
+  count2=1;
+  document.getElementsByClassName("player1count")[0].innerHTML = count1-1;
+  document.getElementsByClassName("player2count")[0].innerHTML = count2-1;
+  document.querySelector('h1').innerHTML = "Reseted";
 }
