@@ -22,7 +22,7 @@ h1 {
   color: #4ECCA3;
 }
 
-p {
+p,table {
   font-size: 2rem;
   color: #4ECCA3;
   font-family: 'Indie Flower', cursive;
