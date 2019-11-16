@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Dicee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    <!-- Bootstrap CSS -->
 
   </head>
   <body>
@@ -13,16 +16,38 @@
       <h1>Refresh Me</h1>
 
       <div class="dice">
-        <p>Player 1</p>
+        <p class="player1name">Player 1</p>
         <img class="img1" src="images/dice6.png">
+    <p>  Wins:</p>  <p class="player1count"> 0</p>
       </div>
 
       <div class="dice">
-        <p>Player 2</p>
+        <p class="player2name">Player 2</p>
         <img class="img2" src="images/dice6.png">
+      <p>Wins:</p>  <p class="player2count"> 0</p>
       </div>
-<button onclick="Dice()">Click Me</button>
+<button class="btn btn-primary" onclick="Dice()">Click Me</button>
     </div>
+
+<p>
+<table >
+  <tr>
+    <td>
+Player 1 Name
+</td>
+<td>
+  <input type="text" id="player1name" style="width:200px;">
+</td>
+</tr>
+<tr>
+  <td>
+Player 2 Name
+</td>
+<td> <input type="text" id="player2name" style="width:200px;" >
+</td>
+</tr>
+</table>
+<button onclick="updatenames()" style="margin-left:250px;" class="btn btn-primary sendnames">Send Names</button>
 
     <script src="index.js" charset="utf-8"></script>
   </body>

@@ -1,3 +1,8 @@
+var count1 = 1;
+var count2 = 1;
+var player1name;
+var player2name;
+
 function Dice()
 {
 
@@ -21,10 +26,24 @@ var image2 = document.getElementsByClassName("img2")[0];
 image2.setAttribute("src", randomImageSource2);
 
 if(randomNumber1>randomNumber2)
-document.querySelector('h1').innerHTML = "Player 1 Wins";
+{
+document.querySelector('h1').innerHTML = player1name+ " Wins";
+document.getElementsByClassName("player1count")[0].innerHTML = count1;
+count1++;
+}
 else if (randomNumber1==randomNumber2)
 document.querySelector('h1').innerHTML = "Tie";
 else
-document.querySelector('h1').innerHTML = "Player 2 Wins";
+{
+document.querySelector('h1').innerHTML = player2name + " Wins";
+document.getElementsByClassName("player2count")[0].innerHTML = count2;
+count2++;
+}
+}
 
+function updatenames(){
+ player1name = document.getElementById("player1name").value;
+ player2name = document.getElementById("player2name").value;
+document.getElementsByClassName("player1name")[0].innerHTML = player1name;
+document.getElementsByClassName("player2name")[0].innerHTML = player2name;
 }
